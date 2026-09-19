@@ -20,3 +20,5 @@ relevant references; those references are not separately installed skills.
 
 Each skill describes its scope and any dependencies. Review changes before
 updating. Repository maintenance instructions stay local to this collection.
+
+Author credits and license terms: [Acknowledgements](ACKNOWLEDGEMENTS.md).

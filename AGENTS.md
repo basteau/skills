@@ -3,7 +3,9 @@
 - Keep this a simple collection of skills and documentation; no custom installer
   or generated installation directories.
 - Preserve complete upstream folders unless the adaptation is documented.
-  Retain supporting scripts, references, assets, and license notices.
+  Retain supporting scripts, references, and assets. Centralize author credits and
+  license terms in ACKNOWLEDGEMENTS.md; include it with redistributed skills.
+  Keep notices beside vendored assets that are copied independently.
 - Keep linked companion skills together and preserve their documented adaptations.
   Project commands and domain constraints come from the target repository.
 - Keep routers compact and explicit-only. Their concepts are Markdown references,

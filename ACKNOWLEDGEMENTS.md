@@ -1,4 +1,71 @@
-                                 Apache License
+# Acknowledgements
+
+Thanks to the authors whose work this collection includes or adapts.
+License terms apply to their respective contributions, not automatically to the
+entire collection.
+
+| Author / copyright notice | Contribution | License |
+| --- | --- | --- |
+| Copyright (c) 2026 Jakub Krehel | `better-ui` router and accessibility, colors, interface, layout, polish, typography, and writing references | MIT |
+| Copyright (c) 2026 Emil Kowalski | `better-ui` animation and PWA references | MIT |
+| Copyright (c) 2026 Lauren Tan | `unslop`; poteto’s TypeScript practices adapted into `better-ts` | MIT |
+| Copyright (c) 2026 Matteo Collina | TypeScript magician patterns adapted into `better-ts` | MIT |
+| Copyright (c) 2024 Seth Hobson | Advanced TypeScript patterns adapted into `better-ts` | MIT |
+| Copyright (c) 2026 Matt Pocock | `matt-pocock` workflow skills | MIT |
+| Copyright (c) 2026 Dillon Mulroy | `install-anti-slop` | MIT |
+| Copyright (c) 2026 HumanLayer | `show-me` | MIT |
+| Copyright 2025 Vercel Inc. | `agent-browser` | Apache-2.0 |
+
+## Adaptations and further credit
+
+The routers reorganize upstream guidance into selectively loaded Markdown
+references. `better-ts` consolidates and rewrites
+[poteto's practices](https://github.com/backnotprop/pstack/tree/main/skills/typescript-best-practices),
+[Matteo Collina's patterns](https://github.com/mcollina/skills/tree/main/skills/typescript-magician),
+and [Seth Hobson's advanced types](https://github.com/wshobson/agents/tree/main/plugins/javascript-typescript/skills/typescript-advanced-types).
+Examples are corrected and rewritten; broad orchestration and global enforcement
+are omitted in favor of the target project's conventions and tools.
+Matt Pocock's articles and official documentation informed this synthesis;
+linked articles are not bundled or licensed by the notices below.
+
+The workflow skills derive from [Matt Pocock's skills](https://github.com/mattpocock/skills/tree/74ca5fe077456a0b3b2f5310cf9430999fd0b5fd),
+adapted through `basteau/selfix` and generalized for this collection.
+The PWA reference adapts [Emil Kowalski's mobile-native skill](https://www.skills.sh/emilkowalski/skills/mobile-native).
+
+These centralized notices replace the per-folder upstream notices. Include this
+file when redistributing individual skills. The separately copied ESLint Stylistic
+asset retains its own [license](install-anti-slop/assets/anti-slop/vendor/eslint-stylistic/LICENSE)
+and [provenance](install-anti-slop/assets/anti-slop/vendor/eslint-stylistic/UPSTREAM.md).
+
+## MIT License
+
+The following terms apply separately to each MIT contribution credited above,
+with its corresponding copyright notice.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Apache License 2.0
+
+The following retained license and notice apply to `agent-browser`.
+
+```text
+Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
@@ -199,3 +266,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+```

@@ -38,4 +38,4 @@ context or ask for the missing problem.
 
 Static types describe contracts; runtime code must uphold them. Verify changed
 contracts with relevant compiler checks and behavior tests, and state what remains
-unverified. Attribution and adaptation notes are in [UPSTREAM-LICENSE](UPSTREAM-LICENSE).
+unverified.
