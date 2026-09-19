@@ -1,0 +1,5 @@
+interface:
+  display_name: "Better UI"
+  short_description: "Load only the UI guidance your task needs"
+policy:
+  allow_implicit_invocation: false
