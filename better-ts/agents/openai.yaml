@@ -1,0 +1,5 @@
+interface:
+  display_name: "Better TypeScript"
+  short_description: "Load only the TypeScript guidance your task needs"
+policy:
+  allow_implicit_invocation: false
