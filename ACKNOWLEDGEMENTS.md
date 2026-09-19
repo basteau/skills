@@ -11,7 +11,7 @@ entire collection.
 | Copyright (c) 2026 Lauren Tan | `unslop`; poteto’s TypeScript practices adapted into `better-ts` | MIT |
 | Copyright (c) 2026 Matteo Collina | TypeScript magician patterns adapted into `better-ts` | MIT |
 | Copyright (c) 2024 Seth Hobson | Advanced TypeScript patterns adapted into `better-ts` | MIT |
-| Copyright (c) 2026 Matt Pocock | `matt-pocock` workflow skills | MIT |
+| Copyright (c) 2026 Matt Pocock | Workflow skills listed below | MIT |
 | Copyright (c) 2026 Dillon Mulroy | `install-anti-slop` | MIT |
 | Copyright (c) 2026 HumanLayer | `show-me` | MIT |
 | Copyright 2025 Vercel Inc. | `agent-browser` | Apache-2.0 |
@@ -29,13 +29,17 @@ Matt Pocock's articles and official documentation informed this synthesis;
 linked articles are not bundled or licensed by the notices below.
 
 The workflow skills derive from [Matt Pocock's skills](https://github.com/mattpocock/skills/tree/74ca5fe077456a0b3b2f5310cf9430999fd0b5fd),
-adapted through `basteau/selfix` and generalized for this collection.
+adapted through `basteau/selfix` and generalized for this collection: `code-review`,
+`codebase-design`, `grill-me`, `grilling`, `implement`,
+`improve-codebase-architecture`, `tdd`, `to-spec`, `to-tickets`, and `wait-what`.
+Their folders live at the repository root for CLI discovery.
 The PWA reference adapts [Emil Kowalski's mobile-native skill](https://www.skills.sh/emilkowalski/skills/mobile-native).
 
 These centralized notices replace the per-folder upstream notices. Include this
-file when redistributing individual skills. The separately copied ESLint Stylistic
-asset retains its own [license](install-anti-slop/assets/anti-slop/vendor/eslint-stylistic/LICENSE)
-and [provenance](install-anti-slop/assets/anti-slop/vendor/eslint-stylistic/UPSTREAM.md).
+file when redistributing individual skills. Each skill links to this single source;
+the skills CLI dereferences the link when copying a skill. The separately copied ESLint Stylistic
+asset retains its own [license](https://github.com/basteau/skills/blob/main/install-anti-slop/assets/anti-slop/vendor/eslint-stylistic/LICENSE)
+and [provenance](https://github.com/basteau/skills/blob/main/install-anti-slop/assets/anti-slop/vendor/eslint-stylistic/UPSTREAM.md).
 
 ## MIT License
 

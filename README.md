@@ -1,24 +1,25 @@
 # Personal skills
 
-Reusable agent skills, adapted to work with the target project's conventions.
+Reusable agent skills, adapted to the target project's conventions.
 
 ## Setup
 
-Clone this repository, then ask your agent:
+Preview available skills without installing:
 
-> Find every SKILL.md recursively. Link each containing folder into
-> ~/.agents/skills under its skill name. Include companion skills, preserve
-> existing installations, and report conflicts.
+```sh
+npx skills add basteau/skills --list
+```
 
-Use the harness's supported skill directory if it differs. Keep the clone in
-place so updates reach the links; reload the agent after setup.
+Run `npx skills add basteau/skills` to select skills, or add `--skill <name>`.
+Select linked companion skills together; the CLI does not resolve dependencies.
+Check for existing skill-name conflicts before installing.
+
+For a live checkout, ask your agent to link each skill folder individually into
+its supported skill directory, preserving existing installations.
 
 ## Use
 
-Invoke a skill by name with your request. Explicit-only routers select the
-relevant references; those references are not separately installed skills.
-
-Each skill describes its scope and any dependencies. Review changes before
-updating. Repository maintenance instructions stay local to this collection.
+Invoke a skill by name. Explicit-only routers load relevant references, which
+are not separately installed skills. Repository maintenance instructions stay local.
 
 Author credits and license terms: [Acknowledgements](ACKNOWLEDGEMENTS.md).
