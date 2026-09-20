@@ -29,6 +29,9 @@ references, then follow supporting links only when needed:
 | Mobile web or PWA feel, sticky hover, tap feedback, viewport or keyboard bugs, safe areas, scroll ownership, browser chrome | [better-pwa](references/better-pwa.md) |
 | Review or audit across UI domains | [better-ui-review](references/better-ui-review.md), plus the relevant domains |
 
+When implementing or reviewing UI in a Tailwind CSS v4 project, also read
+[tailwind](references/tailwind.md).
+
 Combine domains when the task crosses their boundaries. A label rewrite needs
 writing; an overflowing label also needs typography or layout. Broad creation
 starts with better-craft; landing pages start with better-landing-page. Each loads

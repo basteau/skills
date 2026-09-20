@@ -63,6 +63,13 @@ The creation and visual-refinement workflow is local guidance. Matt Pocock's
 [writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents)
 informed explicit routing, progressive disclosure, and completion criteria.
 
+`better-ui/references/tailwind.md` is an original, compact synthesis informed by
+[Tailwind Labs' official v4 documentation](https://tailwindcss.com/docs), reviewed
+2026-09-20. It links to upstream documentation without bundling a documentation
+snapshot or adopting an upstream skill folder. The linked documentation retains
+its own terms; the MIT notices here do not relicense it. Matt Pocock's
+`writing-for-agents` informed the reference's scope and conditional reading links.
+
 `better-ui/references/better-landing-page.md` selectively rewrites
 [Meng To's landing-page skill](https://github.com/MengTo/Skills/tree/5f47e389dac337a1bca5cddf376419248b3010f6/agent-skills/web-design/landing-page)
 and [Elaya's landing-page-design skill](https://github.com/elayadesign/ai-design-skills/tree/1c1e97cb9878e236552c772092dda7adcdddbcb2/skills/landing-page-design),
