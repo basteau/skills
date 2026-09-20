@@ -32,6 +32,8 @@ and [health checks](https://kamal-deploy.org/docs/commands/deploy/),
 and [Dokku's deployment methods](https://dokku.com/docs/deployment/methods/git/).
 Matt Pocock’s [writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents)
 informed the workflow structure, reference routing, and completion criteria.
+The local `basteau/selfix` website deployment informed optional CI configuration,
+artifact verification, and retry guidance; its scripts are not bundled.
 No upstream skill folder, implementation, or documentation text is vendored;
 these linked sources retain their own terms.
 

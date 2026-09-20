@@ -21,14 +21,34 @@ Read relevant provider docs for syntax, trigger interactions, credentials, and
 serialization; use the installed/server version for self-hosted providers:
 
 - **GitHub Actions:** [workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax)
-  and [events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows).
+  and [events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows),
+  plus [deployment environments](https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments).
 - **GitLab CI:** [pipeline rules](https://docs.gitlab.com/ci/yaml/workflow/),
   [job rules](https://docs.gitlab.com/ci/jobs/job_rules/),
-  [configuration reference](https://docs.gitlab.com/ci/yaml/), and
-  [SSH credentials](https://docs.gitlab.com/ci/jobs/ssh_keys/).
+  [configuration reference](https://docs.gitlab.com/ci/yaml/),
+  [SSH credentials](https://docs.gitlab.com/ci/jobs/ssh_keys/), and
+  [variable scopes](https://docs.gitlab.com/ci/variables/).
+
+Record required configuration and where to set it, scoped to the target environment
+where supported. Preserve existing names; these are useful defaults, not a schema:
+
+| Setting | Purpose | Storage |
+| --- | --- | --- |
+| `EXE_SSH_KEY` | Dedicated deployment private key | CI secret |
+| `EXE_KNOWN_HOSTS` | Independently verified SSH host-key entries | Controlled config or CI secret |
+| `EXE_HOST` | Exact tested SSH destination, including any routing username | CI variable |
+| `SITE_URL` | Application URL for builds and verification, when relevant | CI variable |
+
+Keep the SSH destination separate from the application URL. Use provider-returned
+destinations; validate and quote inputs without imposing a guessed hostname format.
+Align environment restrictions and secret availability with allowed branches/tags.
+Fail early with named missing-setting errors before expensive builds or remote changes,
+without printing values. A separate preflight job is optional.
 
 Deploy the triggering revision or its verified build artifact, rather than fetching
-a moving branch head. Make deployment depend on the project's required checks.
+a moving branch head. Pass the revision/artifact as an input to project scripts;
+map provider metadata in CI rather than coupling scripts to GitHub/GitLab variables.
+Make deployment depend on the project's required checks.
 Serialize by deployment target, including jobs from different refs; avoid cancelling
 a job midway through remote mutation and prevent stale jobs overwriting newer releases.
 
@@ -40,6 +60,14 @@ pull/merge-request code. If credentials or account login require user action, co
 the configuration and give the exact remaining setup steps.
 
 ## Verify and record
+
+Validate the staged artifact before activation and make retries safe for the chosen
+workflow, including migrations. Where practical, use an existing version endpoint or
+small release marker to verify the intended revision is served; an HTTP success alone
+can come from the previous release. Keep this alongside a functional application check.
+Separate release directories and atomic switching remain optional. If skipping a
+repeated deployment, compare the actual artifact/release identity: a commit alone may
+not identify output rebuilt with different configuration.
 
 Validate using available provider lint/validation tools. Review representative events
 that should deploy and should not: matching/nonmatching branches or tags, pull/merge
