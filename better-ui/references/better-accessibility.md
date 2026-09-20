@@ -2,7 +2,7 @@
 
 Most accessibility is free if you use the platform. Native elements ship with keyboard support, real labels announce themselves and a visible focus ring is one CSS rule.
 
-Write every fix in the project's styling system, and use the exact values below rather than familiar-looking substitutes.
+Use the project's styling system. Distinguish accessibility requirements from suggested visual treatments and target sizes.
 
 Reviewing means two walks. Keyboard-only, where every flow completes without a mouse. Then screen-reader, where every control announces a name, a role and its state. When unsure, take the platform default over a custom rebuild, and remove ARIA rather than add it.
 
@@ -52,7 +52,7 @@ Icon-only buttons need a descriptive `aria-label`. Visible label text must appea
 
 ## Don't rely on color alone
 
-Status needs a redundant cue: an icon, text, or an underline alongside the color. Work out which WCAG contrast requirement applies, then use [better-colors](better-colors.md) to measure the rendered pair. When it fails, report the pair and the requirement it misses, and leave the colors alone unless asked.
+Status needs a redundant cue: an icon, text, or an underline alongside the color. Work out which WCAG contrast requirement applies, then use [better-colors](better-colors.md) to measure the rendered pair. When it fails, report the pair and the requirement it misses, correct it when fixes are in scope, and remeasure.
 
 ## Honor prefers-reduced-motion
 
@@ -92,15 +92,6 @@ The page must work at 200% zoom and reflow at 320px width without horizontal scr
 
 ## Reporting
 
-**Severity.** `HIGH` prevents a task, hides content from assistive technology, or creates a systemic failure. `MEDIUM` makes an interaction meaningfully harder. `LOW` is isolated polish.
-
 **Verification.** Without a browser: accessible names on every interactive element, keyboard handlers on non-native controls, focus styles, `prefers-reduced-motion` guards and form labels bound to their inputs. With one: tab the flow in order, read computed names and roles from the accessibility tree, confirm a visible focus indicator at every stop and run an automated audit. Report every check you could not run as `Not verified`.
 
-**Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
-
-| Severity | Location | Before | After | Why |
-| --- | --- | --- | --- | --- |
-
-`Location` is `path/to/file:line`. `Why` names the principle and the user impact.
-
-End with `Block` when any `HIGH` remains, `Approve` otherwise, leaving the rest in the table as work to do. Never `Approve` coverage you did not inspect. With nothing to report, state "No actionable accessibility findings" and report verification.
+For reviews, use [the shared review format](better-ui-review.md#report).

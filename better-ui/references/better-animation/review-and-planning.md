@@ -17,12 +17,6 @@ a platform default, shared policy, or component configuration; trace it before r
 
 ## Prioritize actual effects
 
-- **HIGH:** motion blocks an action, hides essential state, makes controls
-  unreachable, ignores reduced-motion preferences for substantial movement, or
-  causes a confirmed severe interruption or performance failure.
-- **MEDIUM:** a reproducible delay, jump, wrong origin, or inconsistency harms use.
-- **LOW:** isolated polish with limited practical impact.
-
 Severity follows evidence and user impact, not a mismatched magic number. Respect
 deliberate choices unless a concrete problem remains. Distinguish observed jank
 from a plausible performance risk. Pure fades, keyboard activation, a library's
@@ -33,22 +27,10 @@ origin, and fixing interruption before adding effects or another abstraction.
 
 ## Report a review
 
-For a cross-domain review, use [better-interface](../better-interface.md)'s consolidated format and severity.
-The format below is for animation-only reviews.
-
-State scope, then use one row per root cause:
-
-| Severity | Location | Before | After | Why |
-| --- | --- | --- | --- | --- |
-
-Cite `path/to/file:line`, current behavior or code, a concrete proposed change, and
-its user impact. Give exact target values or existing token names when proposing
-a timing change. In change reviews, separate pre-existing issues from regressions.
-
-Report checks and unverified behavior. Use `Block` for unresolved HIGH findings;
-otherwise approve only the inspected scope with adequate evidence. If material
-runtime checks are missing, state that verification is incomplete. No actionable
-findings is a valid result; do not invent polish issues to populate the table.
+Use [better-ui-review](../better-ui-review.md) for severity and reporting without
+loading unrelated domains. When proposing a timing change, give concrete target
+values or existing token names. Keep observed jank distinct from an unmeasured
+performance risk.
 
 ## Find opportunities
 

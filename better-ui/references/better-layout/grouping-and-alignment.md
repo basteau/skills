@@ -10,7 +10,9 @@ Three tools create grouping, in order of preference:
 2. **Background shapes**, a card or filled container, where a group must read as one unit such as a selectable row or a draggable card.
 3. **Separator lines**, a last resort for dense data where space costs too much, such as tables and long settings lists.
 
-The structural rule is that the gap between groups is at least 2× the gap within one. At `8px` inside a group, groups need `16px`+ between them, or the eye can't tell where one ends.
+Start with gaps between groups around 2× those within them, then inspect whether
+the groups read clearly. Density, shared alignment, and surface treatment also
+affect how much separation is needed.
 
 ```css
 /* Good: spacing alone communicates the grouping */
@@ -119,5 +121,5 @@ With logical properties, the same hierarchy mirrors correctly in RTL locales.
 The first screenful is a table of contents, not the whole book. If everything is prominent, nothing is:
 
 - One primary action per view. [better-colors](../better-colors.md) owns how color enforces it.
-- Group secondary actions behind a menu once they exceed two or three.
+- Group infrequent secondary actions behind a labeled menu when this improves scanning; keep frequent actions reachable.
 - Prefer a short view that links deeper over a long view that shows everything at level one.

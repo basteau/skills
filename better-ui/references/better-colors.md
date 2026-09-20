@@ -53,7 +53,7 @@ Several colored backgrounds are fine when they encode distinct states or categor
 
 ## Measure the rendered pair, then report
 
-Measure a foreground against the background it actually renders on, not the page background. When a pair fails, report the pair, its measured value and the threshold it misses, then leave the colors alone. They are a design decision. Change them only when asked, and remeasure after ([contrast.md](better-colors/contrast.md)).
+Measure a foreground against the background it actually renders on, not the page background. For a review, report the pair, measured value, and missed threshold. For a build or requested improvement, correct failing pairs within scope while preserving the visual direction, then remeasure ([contrast.md](better-colors/contrast.md)).
 
 ## Pick a gradient's interpolation space
 
@@ -86,15 +86,6 @@ See [color-usage.md](better-colors/color-usage.md).
 
 ## Reporting
 
-**Severity.** `HIGH` makes content unreadable or assigns a misleading semantic color. `MEDIUM` is a noticeable theme, token, or gamut failure. `LOW` is isolated polish.
+**Verification.** Without a browser: token values, the gamut of every declared color, both theme blocks present and contrast computed from the declared token pair. With one: the background actually rendered behind the text, including opacity and any image beneath it, measured in both light and dark. Remeasure corrected pairs after scoped fixes. Report every check you could not run as `Not verified`.
 
-**Verification.** Without a browser: token values, the gamut of every declared color, both theme blocks present and contrast computed from the declared token pair. With one: the background actually rendered behind the text, including opacity and any image beneath it, measured in both light and dark. A failing pair is reported, not repainted. Report every check you could not run as `Not verified`.
-
-**Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
-
-| Severity | Location | Before | After | Why |
-| --- | --- | --- | --- | --- |
-
-`Location` is `path/to/file:line`. `Why` names the principle and the user impact.
-
-End with `Block` when any `HIGH` remains, `Approve` otherwise, leaving the rest in the table as work to do. Never `Approve` coverage you did not inspect. With nothing to report, state "No actionable color findings" and report verification.
+For reviews, use [the shared review format](better-ui-review.md#report).

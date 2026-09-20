@@ -7,11 +7,14 @@ entire collection.
 | Author / copyright notice | Contribution | License |
 | --- | --- | --- |
 | Copyright (c) 2026 Jakub Krehel | `better-ui` router and accessibility, colors, interface, layout, polish, typography, and writing references | MIT |
+| Copyright (c) 2026 Meng To | Landing-page strategy adapted into `better-ui` | MIT |
+| Copyright (c) 2026 Elaya | Landing-page design guidance adapted into `better-ui` | MIT |
+| Copyright (c) 2026 Raphael Salaja | Interaction and visual-design guidance adapted into `better-ui` | MIT |
 | Copyright (c) 2026 Emil Kowalski | `better-ui` animation and PWA references | MIT |
 | Copyright (c) 2026 Lauren Tan | `unslop`; poteto’s TypeScript practices adapted into `better-ts` | MIT |
 | Copyright (c) 2026 Matteo Collina | TypeScript magician patterns adapted into `better-ts` | MIT |
 | Copyright (c) 2024 Seth Hobson | Advanced TypeScript patterns adapted into `better-ts` | MIT |
-| Copyright (c) 2026 Matt Pocock | Workflow skills listed below | MIT |
+| Copyright (c) 2026 Matt Pocock | Workflow skills listed below; agent-writing guidance used for router revisions | MIT |
 | Copyright (c) 2026 Dillon Mulroy | `install-anti-slop` | MIT |
 | Copyright (c) 2026 HumanLayer | `show-me` | MIT |
 | Copyright (c) 2023 Effectful Technologies Inc | Official Effect guidance and API patterns synthesized into `better-effect` | MIT |
@@ -33,6 +36,29 @@ research's topic and failure-case selection. Their skill text and scripts are no
 bundled, and this credit does not assign them the license of the Effect project.
 Matt Pocock’s [writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents)
 informed a subsequent clarity and structure review of `better-effect`.
+
+`better-ui` also draws on Raphael Salaja's
+[userinterface-wiki](https://github.com/raphaelsalaja/userinterface-wiki/tree/256a954080c8bcf1b1ceb1e2a4079d1f24cf593a), reviewed
+2026-09-20, for interaction feedback, completion states, selective prefetching, and
+consistent elevation. These are selective, rewritten adaptations; the upstream
+skill folder, compiled rule catalog, demos, and assets are not vendored. Existing
+motion and typography references retain their focused coverage. Framework-specific
+recipes, fixed timing mandates, and full sound synthesis guidance are omitted.
+The creation and visual-refinement workflow is local guidance. Matt Pocock's
+[writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents)
+informed explicit routing, progressive disclosure, and completion criteria.
+
+`better-ui/references/better-landing-page.md` selectively rewrites
+[Meng To's landing-page skill](https://github.com/MengTo/Skills/tree/5f47e389dac337a1bca5cddf376419248b3010f6/agent-skills/web-design/landing-page)
+and [Elaya's landing-page-design skill](https://github.com/elayadesign/ai-design-skills/tree/1c1e97cb9878e236552c772092dda7adcdddbcb2/skills/landing-page-design),
+reviewed 2026-09-20. It combines offer and audience framing, narrative selection,
+conversion copy, visual composition, interaction states, and page completion.
+This documented adaptation replaces the upstream skill folders with one Markdown
+reference; Meng To's optional reading list and demonstration assets are not bundled.
+It omits fixed section counts, font and palette restrictions, mandatory reveal
+animations, companion-skill dependencies, and automatic indexing decisions.
+Existing local UI references own shared design mechanics. Evidence requirements
+for claims and explicit prototype limitations are local additions.
 
 The routers reorganize upstream guidance into selectively loaded Markdown
 references. `better-ts` consolidates and rewrites

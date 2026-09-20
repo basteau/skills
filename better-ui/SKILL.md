@@ -1,17 +1,24 @@
 ---
 name: better-ui
-description: "Explicitly invoked router that loads only the interface guidance relevant to the user's prompt."
+description: "Create beautifully crafted interfaces with focused guidance for composition, interaction, and refinement."
 disable-model-invocation: true
 ---
 
 # Better UI
 
-Match the user's request to the references below. Read the smallest relevant set,
-then follow deeper links only when their detail is needed. These are Markdown
-references, not separate skills; do not load the whole collection by default.
+Build interfaces whose composition, content, and behavior feel deliberately designed
+for the product. Keep the user's visual direction and the project's platform,
+components, and tokens. Treat aesthetic recipes as starting points; accessibility
+requirements and functional correctness remain constraints.
+
+Route by the requested outcome. Read the smallest relevant set of Markdown
+references, then follow supporting links only when needed:
 
 | Prompt concerns | Read |
 | --- | --- |
+| Landing page, campaign, launch, offer, or conversion-focused page | [better-landing-page](references/better-landing-page.md) first |
+| Create a screen or flow, redesign, “make it beautiful,” or improve overall craft | [better-craft](references/better-craft.md) first |
+| Decisions, forms, feedback, loading, completion, perceived speed | [better-interaction](references/better-interaction.md) |
 | Keyboard, focus, semantics, screen readers, hit areas, reduced motion | [better-accessibility](references/better-accessibility.md) |
 | Grouping, spacing, alignment, responsive layout, overflow, RTL | [better-layout](references/better-layout.md) |
 | Labels, errors, empty states, instructions, tone, terminology | [better-writing](references/better-writing.md) |
@@ -20,18 +27,19 @@ references, not separate skills; do not load the whole collection by default.
 | Surfaces, radii, shadows, icons, optical alignment | [better-polish](references/better-polish.md) |
 | Transitions, easing, gestures, springs, motion performance, effect names | [better-animation](references/better-animation.md) |
 | Mobile web or PWA feel, sticky hover, tap feedback, viewport or keyboard bugs, safe areas, scroll ownership, browser chrome | [better-pwa](references/better-pwa.md) |
-| Review or audit spanning domains | [better-interface](references/better-interface.md), plus the relevant domains |
+| Review or audit across UI domains | [better-ui-review](references/better-ui-review.md), plus the relevant domains |
 
-Route by intent, not isolated words. Combine domains when the problem crosses their
-boundaries; a label rewrite does not need typography unless its rendering is also
-at issue. Load all applicable domains only when the requested scope requires their
-combined guidance. Use better-pwa for mobile web and installed web apps; native-app
-motion still belongs to better-animation.
-If the request has no actionable scope, infer it from the current task or ask for
-the missing surface or problem.
+Combine domains when the task crosses their boundaries. A label rewrite needs
+writing; an overflowing label also needs typography or layout. Broad creation
+starts with better-craft; landing pages start with better-landing-page. Each loads
+domain guidance as its decisions arise. Cross-domain reviews start with
+better-ui-review; focused reviews use their domain. “Make this better” authorizes
+scoped improvements. Infer the surface from the current task;
+ask only when missing context would materially change the work.
 
-Answer, build, fix, or review as requested. Reference reporting sections apply only
-to reviews. Keep the project's stack and conventions; adapt platform-specific
-examples rather than prescribing a technology. Motion belongs to better-animation;
-mobile browser behavior belongs to better-pwa; accessibility requirements belong to
-better-accessibility. Report shared causes once.
+Build or fix when requested, answer focused questions directly, and keep reviews
+read-only unless fixes are requested. Review reporting sections apply only to
+reviews. Verify changes with the project's relevant checks and rendered states;
+state what could not be verified. Report shared causes once.
+
+Credits and adaptation notes: [Acknowledgements](ACKNOWLEDGEMENTS.md).

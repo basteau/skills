@@ -166,5 +166,5 @@ finish the code-verifiable work and identify exactly which device checks remain
 unverified; do not claim a device result from source inspection or emulation.
 
 For implementation, briefly report the symptom, changed behavior, and verification.
-For reviews, use [better-interface](better-interface.md)'s evidence, severity, and
+For reviews, use [better-ui-review](better-ui-review.md)'s evidence, severity, and
 report format without loading unrelated domains.

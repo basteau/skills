@@ -2,13 +2,13 @@
 
 Position, spacing and alignment carry hierarchy before a word is read. This reference builds that structure and stress-tests it: resize it, translate it, mirror it for RTL.
 
-Write every fix in the project's styling system. The numbers below are starting points for interfaces with no established density system, and where one applies, use it as written rather than a familiar-looking substitute. Keep deliberate platform chrome, compact professional tools and project tokens where they still pass the stress tests.
+Write every fix in the project's styling system. The numbers below are starting points for interfaces with no established density system; tune them until grouping and hierarchy read clearly. Keep deliberate platform chrome, compact professional tools and project tokens where they still pass the stress tests.
 
 Hit areas and focus behavior belong to [better-accessibility](better-accessibility.md). Radius and shadows belong to [better-polish](better-polish.md); motion belongs to [better-animation](better-animation.md). Line length and text spacing belong to [better-typography](better-typography.md).
 
 ## Group with space, not lines
 
-Space groups first, background shapes second, separator lines last and only where space alone can't carry the structure. The gap between groups must be at least 2× the gap within one (`8px` intra-group to `16px`+ inter-group), or the grouping reads as noise. Alignment edges and importance ordering are in [grouping-and-alignment.md](better-layout/grouping-and-alignment.md).
+Space groups first, background shapes second, separator lines last and only where space alone can't carry the structure. Make gaps between groups visibly larger than gaps within them; a 2:1 ratio (`8px` within, `16px` between) is a useful starting point. Alignment edges and importance ordering are in [grouping-and-alignment.md](better-layout/grouping-and-alignment.md).
 
 ## Keep controls distinct from content
 
@@ -62,15 +62,6 @@ Never park a critical action where resizing or scrolling clips it. Keep it in th
 
 ## Reporting
 
-**Severity.** `HIGH` blocks content or an action at a supported viewport. `MEDIUM` harms hierarchy, reading order, or adaptability. `LOW` is isolated alignment or spacing polish.
-
 **Verification.** Without a browser: logical properties in place of physical ones, container and media queries against the supported viewport list and DOM order against the intended reading order. With one: every supported width, 200% zoom and the RTL mirror. Report every check you could not run as `Not verified`.
 
-**Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
-
-| Severity | Location | Before | After | Why |
-| --- | --- | --- | --- | --- |
-
-`Location` is `path/to/file:line`. `Why` names the principle and the user impact.
-
-End with `Block` when any `HIGH` remains, `Approve` otherwise, leaving the rest in the table as work to do. Never `Approve` coverage you did not inspect. With nothing to report, state "No actionable layout findings" and report verification.
+For reviews, use [the shared review format](better-ui-review.md#report).

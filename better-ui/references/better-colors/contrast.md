@@ -2,9 +2,9 @@
 
 Contrast is measured between a **foreground color**, meaning text, an icon, or a UI element, and the **background color** it actually renders against, usually the nearest ancestor that paints one. Identify that background first. Measuring against the page background when the element sits on a card gives the wrong answer.
 
-**Report, don't repaint.** When a check fails, report the pair, its measured value and the threshold it misses, and leave the colors unchanged. They are a design decision. Apply the fix below only when asked.
+**Match the task.** In a review, report the failing pair, measured value, and missed threshold. In a build or requested improvement, correct failures within scope and remeasure while preserving the intended palette.
 
-[better-accessibility](../better-accessibility.md) decides when contrast is required and whether a given pair must pass. This file covers measuring the pair and, on request, changing it.
+[better-accessibility](../better-accessibility.md) decides when contrast is required and whether a given pair must pass. This file covers measuring the pair and correcting it when implementation is in scope.
 
 ## APCA thresholds (recommended)
 
@@ -35,7 +35,7 @@ WCAG defines large text in points: 18pt ≈ `24px`, 14pt bold ≈ `18.5px`.
 
 When a project must claim WCAG conformance, WCAG is the gate and APCA is the tiebreaker for anything above it.
 
-## Fixing a failing pair (on request)
+## Fixing a failing pair
 
 **Change lightness first.** It is the channel contrast responds to. Hue and saturation move the measured value far less, so fixing contrast by changing hue is wasted effort.
 

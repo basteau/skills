@@ -4,7 +4,7 @@ Typography is mostly restraint: a sensible scale, comfortable spacing, enough co
 
 When reviewing, read the rendered page instead of scanning the code. Bad wrapping, widows and truncation only show up at real content lengths.
 
-Write every fix in the project's styling system, and use the exact values below rather than familiar-looking equivalents. The [cheat sheet](better-typography/css-cheat-sheet.md) maps each declaration to its Tailwind equivalent.
+Use the project's styling system. Tune suggested sizes and spacing to the typeface, content, and density; verify them at their rendered size. The [cheat sheet](better-typography/css-cheat-sheet.md) maps each declaration to its Tailwind equivalent.
 
 The words themselves belong to [better-writing](better-writing.md). Semantic heading structure belongs to [better-accessibility](better-accessibility.md). Spatial RTL layout and logical properties belong to [better-layout](better-layout.md). Contrast measurement belongs to [better-colors](better-colors.md). This reference owns how text renders, wraps and behaves in mixed-direction content.
 
@@ -108,7 +108,7 @@ Start long-form body text at `16px`, the browser default. Move off it only for a
 
 UI text can go smaller. `14px` is a useful starting point for inputs and menus, `13px` for captions and rarely below `12px`. Inputs still need `16px` on mobile.
 
-When text looks low-contrast, use [better-colors](better-colors.md) to measure the rendered pair and [better-accessibility](better-accessibility.md) to classify the requirement. Leave the colors alone unless asked.
+When text looks low-contrast, use [better-colors](better-colors.md) to measure the rendered pair and [better-accessibility](better-accessibility.md) to classify the requirement. Correct failing pairs when fixes are in scope, then remeasure.
 
 ## Font smoothing on the root
 
@@ -143,15 +143,6 @@ Keep text selectable by default. `::selection` can carry brand into the reading 
 
 ## Reporting
 
-**Severity.** `HIGH` makes text unreadable or truncates content with no way to recover it. `MEDIUM` breaks the type system or the heading hierarchy. `LOW` is isolated polish.
-
 **Verification.** Without a browser: computed size and weight for each heading level, checked descending; declared line-height and measure; truncation rules against realistic string lengths. With one: resize the viewport to catch wrapping, widows and truncation at real content lengths. Report every check you could not run as `Not verified`.
 
-**Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
-
-| Severity | Location | Before | After | Why |
-| --- | --- | --- | --- | --- |
-
-`Location` is `path/to/file:line`. `Why` names the principle and the user impact.
-
-End with `Block` when any `HIGH` remains, `Approve` otherwise, leaving the rest in the table as work to do. Never `Approve` coverage you did not inspect. With nothing to report, state "No actionable typography findings" and report verification.
+For reviews, use [the shared review format](better-ui-review.md#report).

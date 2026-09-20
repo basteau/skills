@@ -11,32 +11,34 @@ spacing belong to [better-layout](better-layout.md). Load those only when releva
 
 ## Concentric border radius
 
-Outer radius = inner radius + padding. Mismatched radii on nested elements is the most common thing that makes an interface feel off. Radius, shadow and outline recipes are in [surfaces.md](better-polish/surfaces.md).
+For closely nested surfaces with an even inset, start with outer radius = inner radius + padding. Independent surfaces can keep independent radius tokens. Radius, shadow and outline recipes are in [surfaces.md](better-polish/surfaces.md).
 
 ## Optical over geometric alignment
 
-When geometric centering looks off, align optically. Buttons with icons, play triangles and asymmetric icons all need a manual nudge.
+When geometric centering looks off, align optically. Check buttons with icons, play triangles, and asymmetric glyphs at render size before nudging them; the icon set may already compensate.
 
 ## Shadows for elevation, borders for structure
 
 Where a border exists only to create depth, prefer layered transparent `box-shadow` values. Keep borders that communicate structure or state: dividers, separators and selected or focus states.
 
+Keep elevation levels consistent: surfaces at the same depth share shadow treatment,
+and higher overlays receive proportionate separation. Where shadows imply a light
+source, use a coherent direction. Inspect depth on the actual background in each
+theme; extra shadow layers are useful only when they improve separation.
+
 ## Image outlines
 
-Give images a `1px` outline at low opacity for consistent depth. Pure black in light mode (`oklch(0 0 0 / 0.1)`), pure white in dark (`oklch(1 0 0 / 0.1)`). Never a near-black like slate or zinc and never a tinted neutral. A tinted outline picks up the surface underneath and reads as dirt on the image edge.
+When an image edge disappears into its surface, try a subtle inset outline using the project separator token or a low-opacity neutral. Check the actual crop in each supported theme; edge-to-edge photography may need no frame.
 
 ## Match icon stroke to text weight
 
-An icon next to text carries the text's optical weight: `1.5px` stroke beside regular (400) text, `2px` beside semibold (600). One stroke weight per icon set and one icon library per surface. Sizing and RTL flipping are in [icons.md](better-polish/icons.md).
+Match the optical weight of adjacent text. On a 24px grid, `1.5px` beside regular text and `2px` beside semibold are starting points; preserve the icon set's native stroke conventions. Sizing and RTL flipping are in [icons.md](better-polish/icons.md).
 
 ## One SVG, recolored per state
 
-Icons use `currentColor` and take hover, selected and disabled states from CSS color and opacity, never from separate assets. Outline is the default variant; fill marks the active state.
+Icons use `currentColor` and take hover, selected and disabled states from CSS color and opacity, never from separate assets. Use outline/fill variants for state when the set supports them and the product uses that convention.
 
 ## Reporting
 
-For reviews, cite the affected file and line, current behavior, proposed correction,
-and user impact. HIGH blocks an interaction or hides state; MEDIUM is a visible
-inconsistency; LOW is isolated polish. Inspect relevant rendered states and mark
-unrun checks as not verified. For a cross-domain review, use
-[better-interface](better-interface.md)'s shared severity and format.
+Inspect relevant rendered states and mark unrun checks as not verified. For reviews,
+use [better-ui-review](better-ui-review.md) for shared severity and reporting.

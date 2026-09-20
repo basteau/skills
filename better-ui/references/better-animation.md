@@ -25,7 +25,7 @@ This reference owns motion purpose, timing, continuity, gestures, and rendering
 cost. [better-polish](better-polish.md) covers visual polish. [better-accessibility](better-accessibility.md) covers reduced-motion
 preferences, equivalent input access, and non-motion state cues. Consult those
 references only when the task needs their details; check motion accessibility here
-regardless. For a cross-domain review, use [better-interface](better-interface.md)'s scope, severity,
+regardless. For a cross-domain review, use [better-ui-review](better-ui-review.md)'s scope, severity,
 and report format. Report each root cause once.
 
 ## Decide whether to animate
