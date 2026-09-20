@@ -22,6 +22,19 @@ entire collection.
 
 ## Adaptations and further credit
 
+`better-deploy` is original deployment guidance informed by
+[exe.dev documentation](https://exe.dev/docs.md) and its
+[agent skill](https://github.com/boldsoftware/exe.dev/blob/main/skill/SKILL.md),
+reviewed 2026-09-20. Design research also consulted
+[Kamal's setup/deploy separation](https://kamal-deploy.org/docs/commands/view-all-commands/)
+and [health checks](https://kamal-deploy.org/docs/commands/deploy/),
+[Capistrano's persistent/shared files](https://capistranorb.com/documentation/getting-started/structure/),
+and [Dokku's deployment methods](https://dokku.com/docs/deployment/methods/git/).
+Matt Pocock’s [writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents)
+informed the workflow structure, reference routing, and completion criteria.
+No upstream skill folder, implementation, or documentation text is vendored;
+these linked sources retain their own terms.
+
 `better-effect` is an original, compact synthesis of the 2026-09-20 Effect v4
 research pack, grounded in Effect v4 package documentation and
 [Effect-TS source](https://github.com/Effect-TS/effect/tree/7869f54af4bd6b2bd58ff45edcb16ba7fe0a69e4).
