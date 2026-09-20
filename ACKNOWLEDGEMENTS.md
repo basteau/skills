@@ -14,9 +14,25 @@ entire collection.
 | Copyright (c) 2026 Matt Pocock | Workflow skills listed below | MIT |
 | Copyright (c) 2026 Dillon Mulroy | `install-anti-slop` | MIT |
 | Copyright (c) 2026 HumanLayer | `show-me` | MIT |
+| Copyright (c) 2023 Effectful Technologies Inc | Official Effect guidance and API patterns synthesized into `better-effect` | MIT |
 | Copyright 2025 Vercel Inc. | `agent-browser` | Apache-2.0 |
 
 ## Adaptations and further credit
+
+`better-effect` is an original, compact synthesis of the 2026-09-20 Effect v4
+research pack, grounded in Effect v4 package documentation and
+[Effect-TS source](https://github.com/Effect-TS/effect/tree/7869f54af4bd6b2bd58ff45edcb16ba7fe0a69e4).
+Official API patterns are rewritten into focused guidance and minimal examples.
+The adaptation intentionally omits full manuals, source archives, installers,
+scanners, and harness policies; no upstream skill folder is adopted or truncated.
+Community work by [Kit Langton](https://github.com/kitlangton/skills),
+[makisuo](https://github.com/makisuo/skills),
+[mpsuesser](https://github.com/mpsuesser/opencode-effect-enforcer), and
+[Esteban Marin](https://github.com/EstebanMarin/effect-ts-workshop) informed the
+research's topic and failure-case selection. Their skill text and scripts are not
+bundled, and this credit does not assign them the license of the Effect project.
+Matt Pocock’s [writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents)
+informed a subsequent clarity and structure review of `better-effect`.
 
 The routers reorganize upstream guidance into selectively loaded Markdown
 references. `better-ts` consolidates and rewrites

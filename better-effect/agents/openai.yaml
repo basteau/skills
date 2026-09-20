@@ -1,0 +1,5 @@
+interface:
+  display_name: "Better Effect"
+  short_description: "Effect v4 guidance, loaded by topic"
+policy:
+  allow_implicit_invocation: false
