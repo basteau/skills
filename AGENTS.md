@@ -4,9 +4,9 @@
   or generated installation directories.
 - Preserve complete upstream folders unless the adaptation is documented.
   Retain supporting scripts, references, and assets. Centralize author credits and
-  license terms in ACKNOWLEDGEMENTS.md; link it into each skill for redistribution.
+  license terms in the root ACKNOWLEDGEMENTS.md; do not add per-skill links.
   Keep notices beside vendored assets that are copied independently.
-- Keep skill folders directly at the root for CLI discovery; preserve companion links.
+- Keep skills under skills/<group>/<name>/ for CLI discovery; preserve companion links.
   Project commands and domain constraints come from the target repository.
 - Keep routers compact and explicit-only. Their concepts are Markdown references,
   not nested skills; load only the references relevant to the request.

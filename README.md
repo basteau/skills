@@ -1,6 +1,7 @@
 # Personal skills
 
 Reusable agent skills, adapted to the target project's conventions.
+Grouped under `skills/<group>/<name>/`; groups do not change skill names.
 
 ## Setup
 
