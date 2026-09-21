@@ -11,7 +11,7 @@ entire collection.
 | Copyright (c) 2026 Elaya | Landing-page design guidance adapted into `better-ui` | MIT |
 | Copyright (c) 2026 Raphael Salaja | Interaction and visual-design guidance adapted into `better-ui` | MIT |
 | Copyright (c) 2026 Emil Kowalski | `better-ui` animation and PWA references | MIT |
-| Copyright (c) 2026 Lauren Tan | `unslop`; poteto’s TypeScript practices adapted into `better-ts` | MIT |
+| Copyright (c) 2026 Lauren Tan | `technical-writing`, `unslop`; poteto’s TypeScript practices adapted into `better-ts` | MIT |
 | Copyright (c) 2026 Matteo Collina | TypeScript magician patterns adapted into `better-ts` | MIT |
 | Copyright (c) 2024 Seth Hobson | Advanced TypeScript patterns adapted into `better-ts` | MIT |
 | Copyright (c) 2026 Matt Pocock | Workflow skills listed below; agent-writing guidance used for router revisions | MIT |
@@ -21,6 +21,16 @@ entire collection.
 | Copyright 2025 Vercel Inc. | `agent-browser` | Apache-2.0 |
 
 ## Adaptations and further credit
+
+`technical-writing` preserves the complete skill folder from
+[backnotprop/pstack](https://github.com/backnotprop/pstack/tree/157aae39a733135e93d8b5b19ff62c6a84b0ad56/skills/technical-writing),
+which credits Lauren Tan (poteto) under MIT. Local changes link its `unslop`
+companion and defer snippet indentation to the target repository's conventions.
+`unslop` preserves the complete skill folder from
+[poteto/plugins](https://github.com/poteto/plugins/tree/74dd2291e8e37b12fd6dc49b2acbd655c6bdaf12/pstack/skills/unslop),
+with the existing task-scoped description retained instead of upstream's global
+"Must always apply" instruction. Both sources were reviewed 2026-09-21; their
+license terms are centralized here and linked into each folder.
 
 `better-deploy` is original deployment guidance informed by
 [exe.dev documentation](https://exe.dev/docs.md) and its
