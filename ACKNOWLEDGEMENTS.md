@@ -1,119 +1,58 @@
 # Acknowledgements
 
-Thanks to the authors whose work this collection includes or adapts.
-License terms apply to their respective contributions, not automatically to the
-entire collection.
+Thanks to everyone whose skills, tools, and guidance this collection builds on.
+License terms apply to each contribution, not automatically to the whole collection.
 
 | Author / copyright notice | Contribution | License |
 | --- | --- | --- |
-| Copyright (c) 2026 Jakub Krehel | `better-ui` router and accessibility, colors, interface, layout, polish, typography, and writing references | MIT |
-| Copyright (c) 2026 Meng To | Landing-page strategy adapted into `better-ui` | MIT |
-| Copyright (c) 2026 Elaya | Landing-page design guidance adapted into `better-ui` | MIT |
-| Copyright (c) 2026 Raphael Salaja | Interaction and visual-design guidance adapted into `better-ui` | MIT |
-| Copyright (c) 2026 Emil Kowalski | `better-ui` animation and PWA references | MIT |
-| Copyright (c) 2026 Lauren Tan ([poteto](https://github.com/poteto)) | `technical-writing`, `unslop`; poteto’s TypeScript practices adapted into `better-ts` | MIT |
-| Copyright (c) 2026 Matteo Collina | TypeScript magician patterns adapted into `better-ts` | MIT |
-| Copyright (c) 2024 Seth Hobson | Advanced TypeScript patterns adapted into `better-ts` | MIT |
-| Copyright (c) 2026 Matt Pocock | Workflow skills listed below; agent-writing guidance used for router revisions | MIT |
-| Copyright (c) 2026 Dillon Mulroy | `install-anti-slop` | MIT |
-| Copyright (c) 2026 HumanLayer | `show-me` | MIT |
-| Copyright (c) 2023 Effectful Technologies Inc | Official Effect guidance and API patterns synthesized into `better-effect` | MIT |
-| Copyright 2025 Vercel Inc. | `agent-browser` | Apache-2.0 |
+| Copyright (c) 2026 [Jakub Krehel](https://github.com/jakubkrehel/skills) | `better-ui` router and accessibility, colors, interface, layout, polish, typography, and writing references | MIT |
+| Copyright (c) 2026 [Meng To](https://github.com/MengTo/Skills) | Landing-page strategy adapted into `better-ui` | MIT |
+| Copyright (c) 2026 [Elaya](https://github.com/elayadesign/ai-design-skills) | Landing-page design guidance adapted into `better-ui` | MIT |
+| Copyright (c) 2026 [Raphael Salaja](https://github.com/raphaelsalaja/userinterface-wiki) | Interaction and visual-design guidance adapted into `better-ui` | MIT |
+| Copyright (c) 2026 [Emil Kowalski](https://www.skills.sh/emilkowalski/skills) | `better-ui` animation and PWA references | MIT |
+| Copyright (c) 2026 [Lauren Tan / poteto](https://github.com/poteto/plugins/tree/main/pstack) | pstack: `technical-writing`, `unslop`, and TypeScript guidance | MIT |
+| Copyright (c) 2026 [Matteo Collina](https://github.com/mcollina/skills) | TypeScript magician patterns adapted into `better-ts` | MIT |
+| Copyright (c) 2024 [Seth Hobson](https://github.com/wshobson/agents) | Advanced TypeScript patterns adapted into `better-ts` | MIT |
+| Copyright (c) 2026 [Matt Pocock](https://github.com/mattpocock/skills) | Workflow skills and agent-writing guidance | MIT |
+| Copyright (c) 2026 [Dillon Mulroy](https://github.com/dmmulroy/anti-slop) | `install-anti-slop` | MIT |
+| Copyright (c) 2026 [HumanLayer](https://github.com/humanlayer) | `show-me` | MIT |
+| Copyright (c) 2023 [Effectful Technologies Inc / Effect-TS](https://github.com/Effect-TS/effect) | Official Effect guidance and API patterns synthesized into `better-effect` | MIT |
+| Copyright 2025 [Vercel Inc. / Vercel Labs](https://github.com/vercel-labs) | `agent-browser`; `skills` powers discovery and installation | Apache-2.0 (`agent-browser`) |
+| Copyright OpenJS Foundation and other contributors, <www.openjsf.org> | ESLint-derived spacing rules | MIT |
+| Copyright (c) 2023-PRESENT [ESLint Stylistic contributors](https://github.com/eslint-stylistic/eslint-stylistic) | Vendored spacing-rule implementation | MIT |
 
-## Adaptations and further credit
+## Further thanks
 
-`technical-writing` and `unslop` are credited to
-[Lauren Tan (poteto)](https://github.com/poteto) under MIT.
-`technical-writing` retains the complete skill folder. Local changes link its
-`unslop` companion and defer snippet indentation to the target repository's conventions.
-`unslop` preserves the complete skill folder from
-[poteto/plugins](https://github.com/poteto/plugins/tree/74dd2291e8e37b12fd6dc49b2acbd655c6bdaf12/pstack/skills/unslop),
-with the existing task-scoped description retained instead of upstream's global
-"Must always apply" instruction. Both sources were reviewed 2026-09-21; their
-license terms are centralized here and linked into each folder.
+- [exe.dev / Bold Software](https://github.com/boldsoftware/exe.dev), [Kamal](https://kamal-deploy.org), [Capistrano](https://capistranorb.com), and [Dokku](https://dokku.com): deployment guidance.
+- [Kit Langton](https://github.com/kitlangton/skills), [makisuo](https://github.com/makisuo/skills), [mpsuesser](https://github.com/mpsuesser/opencode-effect-enforcer), and [Esteban Marin](https://github.com/EstebanMarin/effect-ts-workshop): Effect research and failure cases.
+- [Tailwind Labs](https://tailwindcss.com/docs) and the [Microsoft TypeScript team](https://github.com/microsoft/TypeScript/wiki/Performance): official guidance.
+- `basteau/selfix`: local workflow and deployment experience.
 
-`better-deploy` is original deployment guidance informed by
-[exe.dev documentation](https://exe.dev/docs.md) and its
-[agent skill](https://github.com/boldsoftware/exe.dev/blob/main/skill/SKILL.md),
-reviewed 2026-09-20. Design research also consulted
-[Kamal's setup/deploy separation](https://kamal-deploy.org/docs/commands/view-all-commands/)
-and [health checks](https://kamal-deploy.org/docs/commands/deploy/),
-[Capistrano's persistent/shared files](https://capistranorb.com/documentation/getting-started/structure/),
-and [Dokku's deployment methods](https://dokku.com/docs/deployment/methods/git/).
-Matt Pocock’s [writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents)
-informed the workflow structure, reference routing, and completion criteria.
-The local `basteau/selfix` website deployment informed optional CI configuration,
-artifact verification, and retry guidance; its scripts are not bundled.
-No upstream skill folder, implementation, or documentation text is vendored;
-these linked sources retain their own terms.
+These research sources retain their own terms; credit does not relicense their work.
 
-`better-effect` is an original, compact synthesis of the 2026-09-20 Effect v4
-research pack, grounded in Effect v4 package documentation and
-[Effect-TS source](https://github.com/Effect-TS/effect/tree/7869f54af4bd6b2bd58ff45edcb16ba7fe0a69e4).
-Official API patterns are rewritten into focused guidance and minimal examples.
-The adaptation intentionally omits full manuals, source archives, installers,
-scanners, and harness policies; no upstream skill folder is adopted or truncated.
-Community work by [Kit Langton](https://github.com/kitlangton/skills),
-[makisuo](https://github.com/makisuo/skills),
-[mpsuesser](https://github.com/mpsuesser/opencode-effect-enforcer), and
-[Esteban Marin](https://github.com/EstebanMarin/effect-ts-workshop) informed the
-research's topic and failure-case selection. Their skill text and scripts are not
-bundled, and this credit does not assign them the license of the Effect project.
-Matt Pocock’s [writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents)
-informed a subsequent clarity and structure review of `better-effect`.
+<details>
+<summary>Adaptation notes</summary>
 
-`better-ui` also draws on Raphael Salaja's
-[userinterface-wiki](https://github.com/raphaelsalaja/userinterface-wiki/tree/256a954080c8bcf1b1ceb1e2a4079d1f24cf593a), reviewed
-2026-09-20, for interaction feedback, completion states, selective prefetching, and
-consistent elevation. These are selective, rewritten adaptations; the upstream
-skill folder, compiled rule catalog, demos, and assets are not vendored. Existing
-motion and typography references retain their focused coverage. Framework-specific
-recipes, fixed timing mandates, and full sound synthesis guidance are omitted.
-The creation and visual-refinement workflow is local guidance. Matt Pocock's
-[writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents)
-informed explicit routing, progressive disclosure, and completion criteria.
+- pstack folders are preserved; local changes scope `unslop`, link companions, and defer indentation to the target project.
 
-`better-ui/references/tailwind.md` is an original, compact synthesis informed by
-[Tailwind Labs' official v4 documentation](https://tailwindcss.com/docs), reviewed
-2026-09-20. It links to upstream documentation without bundling a documentation
-snapshot or adopting an upstream skill folder. The linked documentation retains
-its own terms; the MIT notices here do not relicense it. Matt Pocock's
-`writing-for-agents` informed the reference's scope and conditional reading links.
+- `better-deploy` is original guidance; its research sources and deployment scripts are not bundled.
 
-`better-ui/references/better-landing-page.md` selectively rewrites
-[Meng To's landing-page skill](https://github.com/MengTo/Skills/tree/5f47e389dac337a1bca5cddf376419248b3010f6/agent-skills/web-design/landing-page)
-and [Elaya's landing-page-design skill](https://github.com/elayadesign/ai-design-skills/tree/1c1e97cb9878e236552c772092dda7adcdddbcb2/skills/landing-page-design),
-reviewed 2026-09-20. It combines offer and audience framing, narrative selection,
-conversion copy, visual composition, interaction states, and page completion.
-This documented adaptation replaces the upstream skill folders with one Markdown
-reference; Meng To's optional reading list and demonstration assets are not bundled.
-It omits fixed section counts, font and palette restrictions, mandatory reveal
-animations, companion-skill dependencies, and automatic indexing decisions.
-Existing local UI references own shared design mechanics. Evidence requirements
-for claims and explicit prototype limitations are local additions.
+- `better-effect` synthesizes official Effect patterns and community research, not upstream skill folders or scripts. Source details remain in its references.
 
-The routers reorganize upstream guidance into selectively loaded Markdown
-references. `better-ts` consolidates and rewrites
-[poteto's practices](https://github.com/poteto/plugins/tree/main/pstack/skills/typescript-best-practices),
-[Matteo Collina's patterns](https://github.com/mcollina/skills/tree/main/skills/typescript-magician),
-and [Seth Hobson's advanced types](https://github.com/wshobson/agents/tree/main/plugins/javascript-typescript/skills/typescript-advanced-types).
-Examples are corrected and rewritten; broad orchestration and global enforcement
-are omitted in favor of the target project's conventions and tools.
-Matt Pocock's articles and official documentation informed this synthesis;
-linked articles are not bundled or licensed by the notices below.
+- `better-ui` selectively rewrites design skills into topic references rather than preserving upstream folders, catalogs, or demos. Landing-page guidance combines Meng To and Elaya; Tailwind guidance is an original synthesis. Fixed recipes and global mandates are omitted in favor of project conventions.
 
-The workflow skills derive from [Matt Pocock's skills](https://github.com/mattpocock/skills/tree/74ca5fe077456a0b3b2f5310cf9430999fd0b5fd),
-adapted through `basteau/selfix` and generalized for this collection: `code-review`,
-`codebase-design`, `grill-me`, `grilling`, `implement`,
-`improve-codebase-architecture`, `tdd`, `to-spec`, `to-tickets`, and `wait-what`.
-Their folders live at the repository root for CLI discovery.
-The PWA reference adapts [Emil Kowalski's mobile-native skill](https://www.skills.sh/emilkowalski/skills/mobile-native).
+- `better-ts` consolidates and rewrites poteto, Matteo Collina, and Seth Hobson's guidance into references, with corrected examples and project-scoped rules.
 
-These centralized notices replace the per-folder upstream notices. Include this
-file when redistributing individual skills. Each skill links to this single source;
-the skills CLI dereferences the link when copying a skill. The separately copied ESLint Stylistic
-asset retains its own [license](https://github.com/basteau/skills/blob/main/install-anti-slop/assets/anti-slop/vendor/eslint-stylistic/LICENSE)
-and [provenance](https://github.com/basteau/skills/blob/main/install-anti-slop/assets/anti-slop/vendor/eslint-stylistic/UPSTREAM.md).
+- Matt Pocock's `codebase-design`, `grill-me`, `grilling`, `tdd`, and `wait-what` are local adaptations of revision `74ca5fe077456a0b3b2f5310cf9430999fd0b5fd`. The other ten folders are complete upstream copies from `c55ee46073ed923f86ce59a5eb3b6d895095d1b7`.
+
+</details>
+
+Credits and license terms are maintained only in this root file. Include the
+applicable notices when redistributing individual skills. Vendored ESLint Stylistic
+assets retain their license and provenance beside independently copied code.
+
+<details>
+<summary>Required license terms (MIT and Apache-2.0)</summary>
 
 ## MIT License
 
@@ -345,3 +284,5 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
+</details>
