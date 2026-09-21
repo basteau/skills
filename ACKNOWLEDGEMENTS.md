@@ -11,7 +11,7 @@ License terms apply to each contribution, not automatically to the whole collect
 | Copyright (c) 2026 [Raphael Salaja](https://github.com/raphaelsalaja/userinterface-wiki) | Interaction and visual-design guidance adapted into `better-ui` | MIT |
 | Copyright (c) 2026 [Emil Kowalski](https://www.skills.sh/emilkowalski/skills) | `better-ui` animation and PWA references | MIT |
 | Copyright (c) 2026 [Lauren Tan / poteto](https://github.com/poteto/plugins/tree/main/pstack) | pstack: `technical-writing`, `unslop`, and TypeScript guidance | MIT |
-| Copyright (c) 2026 [Matteo Collina](https://github.com/mcollina/skills) | `typescript-magician` advanced reference and rule files | MIT |
+| Copyright (c) 2026 [Matteo Collina](https://github.com/mcollina/skills) | Advanced TypeScript references integrated into `better-ts` | MIT |
 | Copyright (c) 2026 [Matt Pocock](https://github.com/mattpocock/skills) | Workflow skills and agent-writing guidance | MIT |
 | Copyright (c) 2026 [Dillon Mulroy](https://github.com/dmmulroy/anti-slop) | `install-anti-slop` | MIT |
 | Copyright (c) 2026 [HumanLayer](https://github.com/humanlayer) | `show-me` | MIT |
@@ -41,9 +41,9 @@ These research sources retain their own terms; credit does not relicense their w
 
 - `better-ui` selectively rewrites design skills into topic references rather than preserving upstream folders, catalogs, or demos. Landing-page guidance combines Meng To and Elaya; Tailwind guidance is an original synthesis. Fixed recipes and global mandates are omitted in favor of project conventions.
 
-- `better-ts` adapts poteto's `typescript-best-practices` (`SKILL.md` and `references/patterns.md`) from revision `74dd2291e8e37b12fd6dc49b2acbd655c6bdaf12`. It retains the rule-table/example structure under an explicit-only local name, inlines essential companion-principle guidance, corrects assertion/inference wording, and adds Standard Schema parsing, a Valibot/better-result example, and project-applicable strictness. It replaces the earlier multi-source router and advanced references.
+- `better-ts` adapts poteto's `typescript-best-practices` (`SKILL.md` and `references/patterns.md`) from revision `74dd2291e8e37b12fd6dc49b2acbd655c6bdaf12`. It retains the rule-table/example structure under a model-invokable local name, inlines essential companion-principle guidance, corrects assertion/inference wording, and adds Standard Schema parsing, a Valibot/better-result example, and project-applicable strictness. It replaces the earlier multi-source router and advanced references.
 
-- `typescript-magician` is an unmodified copy of the complete upstream skill folder from Matteo Collina's revision `856efd268ae85482d882f3d0bed869fd020b5c06`, linked from `better-ts` for advanced TypeScript.
+- `better-ts` incorporates Matteo Collina's `typescript-magician` (`856efd268ae85482d882f3d0bed869fd020b5c06`): all fourteen rule files are unchanged; the standalone skill and discovery metadata are replaced by a reference index. Existing `better-ts` rules remain unchanged.
 
 - Matt Pocock's `codebase-design`, `grill-me`, `grilling`, `tdd`, and `wait-what` are local adaptations of revision `74ca5fe077456a0b3b2f5310cf9430999fd0b5fd`. The other ten folders are complete upstream copies from `c55ee46073ed923f86ce59a5eb3b6d895095d1b7`.
 

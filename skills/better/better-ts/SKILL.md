@@ -25,6 +25,6 @@ Make illegal states unrepresentable; parse external data into trusted types.
 
 Examples: [references/patterns.md](references/patterns.md). Load only the sections relevant to the task.
 
-For advanced TypeScript, refer to the [typescript-magician skill](../../mcollina/typescript-magician/SKILL.md).
+For advanced TypeScript, refer to the [typescript-magician reference](references/advanced.md).
 
 Use the project's toolchain and check commands; verify changed contracts with type checks and relevant runtime tests. Keep changes scoped to the request rather than starting an unrelated dependency migration or configuration overhaul.
