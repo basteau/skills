@@ -1,7 +1,6 @@
 ---
 name: better-ts
-description: "TypeScript best practices. Use explicitly when reading, writing, or reviewing TypeScript, including embedded TypeScript in framework components."
-disable-model-invocation: true
+description: "TypeScript best practices. Use when reading, writing, or reviewing TypeScript, including embedded TypeScript in framework components."
 ---
 
 # TypeScript best practices
