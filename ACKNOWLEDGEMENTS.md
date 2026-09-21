@@ -11,8 +11,7 @@ License terms apply to each contribution, not automatically to the whole collect
 | Copyright (c) 2026 [Raphael Salaja](https://github.com/raphaelsalaja/userinterface-wiki) | Interaction and visual-design guidance adapted into `better-ui` | MIT |
 | Copyright (c) 2026 [Emil Kowalski](https://www.skills.sh/emilkowalski/skills) | `better-ui` animation and PWA references | MIT |
 | Copyright (c) 2026 [Lauren Tan / poteto](https://github.com/poteto/plugins/tree/main/pstack) | pstack: `technical-writing`, `unslop`, and TypeScript guidance | MIT |
-| Copyright (c) 2026 [Matteo Collina](https://github.com/mcollina/skills) | TypeScript magician patterns adapted into `better-ts` | MIT |
-| Copyright (c) 2024 [Seth Hobson](https://github.com/wshobson/agents) | Advanced TypeScript patterns adapted into `better-ts` | MIT |
+| Copyright (c) 2026 [Matteo Collina](https://github.com/mcollina/skills) | `typescript-magician` advanced reference and rule files | MIT |
 | Copyright (c) 2026 [Matt Pocock](https://github.com/mattpocock/skills) | Workflow skills and agent-writing guidance | MIT |
 | Copyright (c) 2026 [Dillon Mulroy](https://github.com/dmmulroy/anti-slop) | `install-anti-slop` | MIT |
 | Copyright (c) 2026 [HumanLayer](https://github.com/humanlayer) | `show-me` | MIT |
@@ -26,6 +25,7 @@ License terms apply to each contribution, not automatically to the whole collect
 - [exe.dev / Bold Software](https://github.com/boldsoftware/exe.dev), [Kamal](https://kamal-deploy.org), [Capistrano](https://capistranorb.com), and [Dokku](https://dokku.com): deployment guidance.
 - [Kit Langton](https://github.com/kitlangton/skills), [makisuo](https://github.com/makisuo/skills), [mpsuesser](https://github.com/mpsuesser/opencode-effect-enforcer), and [Esteban Marin](https://github.com/EstebanMarin/effect-ts-workshop): Effect research and failure cases.
 - [Tailwind Labs](https://tailwindcss.com/docs) and the [Microsoft TypeScript team](https://github.com/microsoft/TypeScript/wiki/Performance): official guidance.
+- [better-result / Dillon Mulroy](https://github.com/dmmulroy/better-result), [Valibot](https://valibot.dev), [Standard Schema](https://standardschema.dev), and [Alexis King](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/): TypeScript boundary parsing and expected-error guidance.
 - `basteau/selfix`: local workflow and deployment experience.
 
 These research sources retain their own terms; credit does not relicense their work.
@@ -41,7 +41,9 @@ These research sources retain their own terms; credit does not relicense their w
 
 - `better-ui` selectively rewrites design skills into topic references rather than preserving upstream folders, catalogs, or demos. Landing-page guidance combines Meng To and Elaya; Tailwind guidance is an original synthesis. Fixed recipes and global mandates are omitted in favor of project conventions.
 
-- `better-ts` consolidates and rewrites poteto, Matteo Collina, and Seth Hobson's guidance into references, with corrected examples and project-scoped rules.
+- `better-ts` adapts poteto's `typescript-best-practices` (`SKILL.md` and `references/patterns.md`) from revision `74dd2291e8e37b12fd6dc49b2acbd655c6bdaf12`. It retains the rule-table/example structure under an explicit-only local name, inlines essential companion-principle guidance, corrects assertion/inference wording, and adds Standard Schema parsing, a Valibot/better-result example, and project-applicable strictness. It replaces the earlier multi-source router and advanced references.
+
+- `typescript-magician` is an unmodified copy of the complete upstream skill folder from Matteo Collina's revision `856efd268ae85482d882f3d0bed869fd020b5c06`, linked from `better-ts` for advanced TypeScript.
 
 - Matt Pocock's `codebase-design`, `grill-me`, `grilling`, `tdd`, and `wait-what` are local adaptations of revision `74ca5fe077456a0b3b2f5310cf9430999fd0b5fd`. The other ten folders are complete upstream copies from `c55ee46073ed923f86ce59a5eb3b6d895095d1b7`.
 

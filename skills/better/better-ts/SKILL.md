@@ -1,41 +1,31 @@
 ---
 name: better-ts
-description: "Explicitly invoked router that loads only the TypeScript guidance relevant to the user's prompt."
+description: "TypeScript best practices. Use explicitly when reading, writing, or reviewing TypeScript, including embedded TypeScript in framework components."
 disable-model-invocation: true
 ---
 
-# Better TypeScript
+# TypeScript best practices
 
-Read the smallest relevant set of references. These are Markdown concepts, not
-separate skills. Follow their deeper links only when the task needs that detail.
+Make illegal states unrepresentable; parse external data into trusted types.
 
-| Prompt concerns | Read |
-| --- | --- |
-| Domain states, unions, optional fields, brands, non-empty collections | [better-modeling](references/better-modeling.md) |
-| External data, schemas, guards, assertions, runtime validation | [better-boundaries](references/better-boundaries.md) |
-| Widening, annotations, `satisfies`, `as const`, deriving and locating types | [better-inference](references/better-inference.md) |
-| Generic APIs, constraints, callbacks, overloads, correlated arguments, builders | [better-generics](references/better-generics.md) |
-| Conditional or mapped types, `infer`, distribution, template literals, recursion | [better-type-operators](references/better-type-operators.md) |
-| Compiler flags, ESM/CJS, module resolution, declarations, JS migration | [better-configuration](references/better-configuration.md) |
-| Type errors, narrowing surprises, compiler reproduction, type and runtime tests | [better-verification](references/better-verification.md) |
-| Slow checking, editor latency, huge instantiations or declarations | [better-performance](references/better-performance.md) |
-| TypeScript review or audit spanning domains | [better-ts-review](references/better-ts-review.md), plus relevant domains |
+| Rule | Summary |
+|------|---------|
+| Discriminated unions | Model variants with a `kind` literal discriminant so impossible states can't be represented. No optional-field bags. |
+| Branded types | Brand primitives with `& { readonly __brand: "X" }` so they can't be mixed up. Validate once at creation. |
+| `unknown` over `any` | External data is `unknown`. `any` disables type checking everywhere it touches. |
+| No `as` casts | Avoid unchecked assertions. Narrow or parse instead; isolate unavoidable casts behind a verified invariant. `as const` is not a payload assertion. |
+| Narrowing hierarchy | Discriminant switch > `in` operator > `typeof`/`instanceof` > user-defined type guard > `as`. |
+| Type guards | Must verify the claim. A lying guard is worse than `as` because the bug hides behind a name that says it's safe. Name them `isX` or `hasX`. |
+| Exhaustiveness | Inline `const _exhaustive: never = x;` in default arms so the compiler errors when a new variant is added. |
+| `satisfies` over `as` | Checks assignability without replacing the expression's inferred type. Not runtime validation. |
+| Boundary validation | Always parse external `unknown` with a Standard Schema–compliant library when its expected schema is known. Reuse existing schemas, consume the parsed output, and trust validated types inside. |
+| Schema-derived types | Infer parsed types from schemas; distinguish input from output. Reuse generated contracts and reach for `Pick`/`Omit`/`Parameters`/`ReturnType`/`Awaited`/`typeof` before declaring a new interface. |
+| Object args | Pass objects, not positional, so argument order is self-documenting. Skip on hot paths (per-frame render, tokenizers, parsers). |
+| Expected errors | Always represent expected failures with `better-result`'s `Result<T, E>` and explicit `TaggedError` variants. Handle or propagate them; keep defects exceptional and infallible functions plain. |
+| Strict configuration | Use the strictest type-checking settings applicable to the project's TypeScript version and toolchain. Document necessary exceptions; fix errors rather than weakening checks. |
 
-Route by the problem, not isolated words. An HTTP response typed incorrectly needs
-boundary guidance; a generic that loses its return type needs inference or generics.
-A compiler configuration question does not require an application-wide type audit.
-Load all domains only when the requested scope needs them.
+Examples: [references/patterns.md](references/patterns.md). Load only the sections relevant to the task.
 
-Identify the target project's compiler version, runtime, configuration, conventions,
-and check commands before applying version-sensitive advice. Use its installed
-toolchain and existing schemas, libraries, and error conventions. Prefer the
-simplest accurate type; advanced machinery must preserve a useful relationship.
+For advanced TypeScript, refer to the [typescript-magician skill](../../mcollina/typescript-magician/SKILL.md).
 
-Answer, build, fix, or review as requested. Reviews are read-only unless fixes were
-requested. Do not expand a local fix into a dependency upgrade, framework migration,
-configuration overhaul, or repository-wide ban. If scope is missing, use task
-context or ask for the missing problem.
-
-Static types describe contracts; runtime code must uphold them. Verify changed
-contracts with relevant compiler checks and behavior tests, and state what remains
-unverified.
+Use the project's toolchain and check commands; verify changed contracts with type checks and relevant runtime tests. Keep changes scoped to the request rather than starting an unrelated dependency migration or configuration overhaul.
