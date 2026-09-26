@@ -6,71 +6,76 @@ disable-model-invocation: true
 
 # Better Deploy
 
-Use the project's tools and the simplest suitable deployment. Brief downtime is
-acceptable by default; recovery procedures and uninterrupted releases are optional.
+Use the project's tools and the simplest suitable deployment. Brief downtime is fine;
+recovery and zero-downtime releases are optional. Finish steps in order unless noted.
 
-## Discover
+## 1. Resolve
 
 Read project instructions, `DEPLOY.md` (or its existing equivalent), and relevant
-scripts/runtime definitions. Derive commands from the project and installed tools.
-For exe.dev operations, consult the [live documentation](https://exe.dev/docs.md)
-([HTML index](https://exe.dev/docs/list)) and `ssh exe.dev help`, then
-`ssh exe.dev help <command>` as needed. Read only relevant pages. Obtain current
-syntax, capabilities, connection destinations, and URLs from those sources and live
-responses rather than assuming provider defaults or copying recipes from this skill.
-If SSH access is missing or fails, follow [SSH access](references/ssh-access.md).
-When asked to automate deployments or change CI triggers, follow
-[CI deployment](references/ci.md); otherwise keep deployment manual.
+scripts/runtime definitions; derive commands from them and the installed tools.
+Settle these once, reopening only if inputs change; ask only material open choices:
 
-Resolve the source on every deployment. If uncommitted changes exist, ask whether
-to include them or deploy a chosen commit/branch, unless already specified. Resolve
-branches to exact revisions; deploying local changes need not require committing or
-pushing. CI deploys its selected revision/artifact, not local uncommitted changes.
-Ask questions directly and only for unresolved decisions.
+- **Source:** an exact revision. Ask whether to include uncommitted pre-existing
+  application changes unless specified; deployment files created in this task need
+  no question. Deploying local changes need not require committing or pushing.
+- **Target:** default to one VM per project with a readable project-derived name.
+  Inspect existing targets; ask if ownership or intent is ambiguous.
+- **Access:** public or private web access. Use the provider URL unless a custom
+  domain is already configured or requested.
+- **Scope:** manual, unless automation or CI trigger changes are requested; then
+  also follow [CI deployment](references/ci.md).
 
-## First deployment
+## 2. Preflight
 
-- Default to one VM per project with a readable project-derived name. Inspect existing
-  targets; ask if ownership or intent is ambiguous. Save the actual chosen target.
-- Ask public versus private web access if unclear, then remember. Use the provider URL
-  unless a custom domain is already configured or requested.
-- Choose transfer and build location to suit the source and runtime: rsync, Git, or
-  images are options, not requirements. Reuse existing deployment tooling.
-- Derive production build/start commands and arrange supervision for long-running
-  services to survive disconnects and reboots. Separate provisioning and initial data
-  setup from recurring deployment commands.
-- For databases/services, follow existing arrangements; otherwise choose the simplest
-  suitable setup on the same VM. Keep persistent data and secrets outside replaceable
-  code. Resolve missing secrets through the project's delivery mechanism.
+Before builds, uploads, or remote changes, run required local tools (such as the
+package manager's `--version`) rather than only locating them; report a broken
+launcher's cause and change tool installation or invocation only with approval.
+Confirm provider access read-only. Create and remove a probe under every remote path
+the deployment mutates, including parents holding locks or releases; fix ownership
+(explicitly, when provisioning) before uploading. Local preparation may proceed while
+a new target is provisioned. Send each remote command as one correctly quoted string;
+for any SSH failure, including to the VM, use [SSH access](references/ssh-access.md).
 
-## Deploy or update
+For exe.dev, use `DEPLOY.md` first (project memory, not a frozen specification), then
+`ssh exe.dev help` and `help <command>` for operations this run needs; read a
+[docs](https://exe.dev/docs.md) page only if a question remains; stop once answered.
 
-Reuse the saved workflow on recurring deployments, checking relevant assumptions
-still hold. Resolve a missing or ambiguous target before proceeding. Verify provider
-operations against current help/docs when using them; saved commands are project
-memory, not a frozen provider specification.
+## 3. Prepare
 
-Transfer only the selected inputs, preserving remote secrets and persistent data,
-including when using rsync deletion. Run needed dependency, build, and migration
-steps in project-defined order; stop dependent steps on failure. Prepare before
-interrupting the app where practical, and restart only affected services. Keep data
-initialization separate from routine updates and avoid overlapping deployments.
-For migrations risking data loss or compatibility, establish the needed backup or
-maintenance step first; reverting code does not reverse data changes.
+Run the project's checks and production build for the selected source, reusing
+results while source, configuration, and dependencies are unchanged. On a first
+deployment, fit transfer and build location to the runtime (rsync, Git, or images),
+reusing existing tooling; supervise long-running services across disconnects and
+reboots; keep provisioning and data setup out of recurring commands. Follow existing
+database/service arrangements, else the simplest setup on the same VM. Keep data and
+secrets outside replaceable code; get missing secrets via the project's mechanism.
 
-Verify the deployed app through its URL or a suitable worker/service check; an auth
-login page alone is not success. On failure, inspect logs and use an established safe
-recovery path if available, otherwise report the actual state and unresolved issue.
+## 4. Deploy
 
-## Record and finish
+Transfer only the selected inputs, preserving remote secrets and data (also under
+rsync deletion). Run dependency, build, and migration steps in project order,
+stopping dependent steps on failure. Prepare before interrupting the app; restart only
+affected services. Before risky migrations, secure a backup or maintenance step;
+reverting code does not reverse data. Hold one per-target lock from build selection
+through activation, or refuse to activate a release older than the active one.
 
-Maintain a short, checked-in `DEPLOY.md`, reusing an existing equivalent. Record the
-target and URL, any necessary first-time setup, and working deploy/verify commands
-with their directories, preferably referencing project scripts. Add state, services,
-secret names/locations, or recovery notes only where relevant. Never record secret
-values. Use no mandatory template or empty sections.
+## 5. Verify and record
 
-For a deployment, done means the selected source is running, verification passes,
-and the workflow is recorded. For CI setup, use the completion criteria in its
-reference. Report what was configured versus actually deployed and verified.
-Commit, push, and skill installation require a separate request.
+Check the live target through the exact recurring entry point; run a created or
+repaired deploy script end to end before calling it verified:
+
+- **Identity:** served content or a release marker matches the new artifact. HTTP 200
+  may be the old release; redirects and login pages prove no identity or behavior.
+- **Access:** anonymous requests reach a public site; a private one requires login.
+- **Behavior:** one meaningful behavior works (a non-index route or asset for static
+  sites; a service or worker check where there is no web page).
+
+On failure, inspect logs and use an established safe recovery path if one exists.
+Keep `DEPLOY.md` short, reusing an existing equivalent: target, URL, access mode,
+first-time setup, and tested deploy/verify commands with directories, preferably
+project scripts; add services, secret names/locations, recovery notes, or limitations
+only where relevant. Never record secret values; leave no empty sections.
+
+Done means verification passes and `DEPLOY.md` is updated (CI setup: ci.md's ready
+and verified states). Report configured versus deployed and verified state, calling
+partial evidence partial. Commit, push, or install skills only on separate request.

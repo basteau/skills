@@ -62,9 +62,9 @@ the configuration and give the exact remaining setup steps.
 ## Verify and record
 
 Validate the staged artifact before activation and make retries safe for the chosen
-workflow, including migrations. Where practical, use an existing version endpoint or
-small release marker to verify the intended revision is served; an HTTP success alone
-can come from the previous release. Keep this alongside a functional application check.
+workflow, including migrations. Apply the main skill's completion criteria from the
+CI job itself, verifying private access separately where CI cannot authenticate; an
+existing version endpoint or small release marker makes artifact identity checkable.
 Separate release directories and atomic switching remain optional. If skipping a
 repeated deployment, compare the actual artifact/release identity: a commit alone may
 not identify output rebuilt with different configuration.
